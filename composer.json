@@ -1,0 +1,63 @@
+{
+    "name": "homeguru/mis",
+    "description": "HomeGuru School Management Information System",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "HomeGuru Team",
+            "email": "info@homeguru.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "ext-pdo": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "ext-openssl": "*",
+        "ext-curl": "*",
+        "ext-gd": "*",
+        "ext-zip": "*",
+        "vlucas/phpdotenv": "^5.0",
+        "firebase/php-jwt": "^6.0",
+        "phpmailer/phpmailer": "^6.8",
+        "twilio/sdk": "^7.0",
+        "razorpay/razorpay": "^2.8",
+        "stripe/stripe-php": "^10.0",
+        "phpoffice/phpspreadsheet": "^1.29",
+        "tecnickcom/tcpdf": "^6.6",
+        "endroid/qr-code": "^4.6",
+        "monolog/monolog": "^3.0",
+        "predis/predis": "^2.0",
+        "ramsey/uuid": "^4.7",
+        "intervention/image": "^2.7"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0",
+        "phpstan/phpstan": "^1.10",
+        "squizlabs/php_codesniffer": "^3.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "test-coverage": "phpunit --coverage-html coverage",
+        "cs-check": "phpcs --standard=PSR12 app/",
+        "cs-fix": "phpcbf --standard=PSR12 app/",
+        "stan": "phpstan analyse app/ --level=8"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
